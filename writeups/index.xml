@@ -3,25 +3,29 @@
   <channel>
     <title>Writeups on erk3&#39;s
 spot</title>
-    <link>https://erk3.github.io/writeups/</link>
+    <link>http://127.0.0.1/writeups/</link>
     <description>Recent content in Writeups on erk3&#39;s
 spot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 31 May 2022 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://erk3.github.io/writeups/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://127.0.0.1/writeups/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Intigriti&#39;s monthly challenge - May 2022</title>
-      <link>https://erk3.github.io/writeups/intigriti-0522/</link>
+      <link>http://127.0.0.1/writeups/intigriti-0522/</link>
       <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://erk3.github.io/writeups/intigriti-0522/</guid>
+      <guid>http://127.0.0.1/writeups/intigriti-0522/</guid>
       <description>This content is password protected for the time being.
-Javascript needs to be enabled to decrypt content    The challenge First contact While browsing the website, one can notice the ?page=x query parameter having different integer values in the URI. A quick glance at the website source code then leads to a particular &amp;lt;script&amp;gt; tag handling it:
-var pages = { 1: &amp;#39;HOME [∝&amp;lt; SOME HTML CODE &amp;gt;∝]&amp;#39;, 2: &amp;#39;PRODUCTS [∝&amp;lt; SOME HTML CODE &amp;gt;∝]&amp;#39;, 3: &amp;#39;CONTACT [∝&amp;lt; SOME HTML CODE &amp;gt;∝]&amp;#39;, 4: &amp;#39;[∝&amp;lt; SOME HTML CODE &amp;gt;∝]&amp;#39;, }; var pl = $.</description>
+Javascript needs to be enabled to decrypt content    The challenge ⏰ It&amp;#39;s CHALLENGE O&amp;#39;CLOCK!
+👉 Find the XSS before Friday June 3th!
+👉 Win €300 in SWAG prizes!
+👉 We&amp;#39;ll release a tip for every 100 likes on this tweet!
+Thanks @PiyushThePal for the challenge! 👇https://t.co/X0nq805bVE
+&amp;mdash; INTIGRITI (@intigriti) May 27, 2022  First contact   While browsing the website, one can notice the ?</description>
     </item>
     
   </channel>

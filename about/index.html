@@ -7,7 +7,7 @@
     <head>
     <link href="https://gmpg.org/xfn/11" rel="profile">
     
-    <link rel="canonical" href="https://erk3.github.io/about/">
+    <link rel="canonical" href="http://127.0.0.1/about/">
     
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,18 +25,18 @@ spot</title>
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="About"/>
-<meta name="twitter:description" content=" $&gt; whoami Reach out, we&rsquo;ll have a beer. If I like you we&rsquo;ll switch to whiskey.
+<meta name="twitter:description" content=" $&gt; whoami Reach out, we&rsquo;ll have a beer. If I like you we&rsquo;ll switch to whisky.
 Why this website? I like tech and offsec stuff. Sometimes I feel like sharing.
 Why &lsquo;erk3&rsquo; ? Because Ecky-Ecky-Ecky-erk3-Pakang-Zoom-Boing-Gumzowehzeh.
   "/>
 
 <meta property="og:title" content="About" />
-<meta property="og:description" content=" $&gt; whoami Reach out, we&rsquo;ll have a beer. If I like you we&rsquo;ll switch to whiskey.
+<meta property="og:description" content=" $&gt; whoami Reach out, we&rsquo;ll have a beer. If I like you we&rsquo;ll switch to whisky.
 Why this website? I like tech and offsec stuff. Sometimes I feel like sharing.
 Why &lsquo;erk3&rsquo; ? Because Ecky-Ecky-Ecky-erk3-Pakang-Zoom-Boing-Gumzowehzeh.
   " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://erk3.github.io/about/" />
+<meta property="og:url" content="http://127.0.0.1/about/" />
 <meta property="article:published_time" content="2022-05-31T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-05-31T00:00:00+00:00" />
 
@@ -72,9 +72,9 @@ Why &lsquo;erk3&rsquo; ? Because Ecky-Ecky-Ecky-erk3-Pakang-Zoom-Boing-Gumzowehz
     
 
     
-    <link rel="stylesheet" href="https://erk3.github.io/css/custom.css">
+    <link rel="stylesheet" href="http://127.0.0.1/css/custom.css">
     
-    <script type="text/javascript" src="https://erk3.github.io/js/custom.js"></script>
+    <script type="text/javascript" src="http://127.0.0.1/js/custom.js"></script>
 </head>
 
 
@@ -84,7 +84,7 @@ Why &lsquo;erk3&rsquo; ? Because Ecky-Ecky-Ecky-erk3-Pakang-Zoom-Boing-Gumzowehz
   <div class="container ">
     <div class="sidebar-about">
       <span class="site__title">
-        <a href="https://erk3.github.io/">
+        <a href="http://127.0.0.1/">
         
           erk3&#39;s
 spot
@@ -96,7 +96,7 @@ spot
         
         
         <div class="author-image">
-          <img src="https://erk3.github.io/img/grumpycat.png" alt="Author Image" class="img--circle img--headshot element--center">
+          <img src="http://127.0.0.1/img/grumpycat.png" alt="Author Image" class="img--circle img--headshot element--center">
         </div>
         
       
@@ -221,7 +221,7 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
   <div class="post">
     <hr>
 <h2 id="-whoami">$&gt; whoami</h2>
-<p>Reach out, we&rsquo;ll have a beer. If I like you we&rsquo;ll switch to whiskey.</p>
+<p>Reach out, we&rsquo;ll have a beer. If I like you we&rsquo;ll switch to whisky.</p>
 <h2 id="why-this-website">Why this website?</h2>
 <p>I like tech and offsec stuff. Sometimes I feel like sharing.</p>
 <h2 id="why-erk3-">Why &lsquo;erk3&rsquo; ?</h2>
@@ -266,9 +266,15 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
         
     <script type="text/javascript">
         
-        hljs.initHighlightingOnLoad();
          
-        hljs.addPlugin(new CopyButtonPlugin());
+        var reloadHighlightJSAfterHugoDecrypt = true;
+        document.addEventListener("DOMNodeInserted", function(evt) {
+            if (reloadHighlightJSAfterHugoDecrypt && evt.relatedNode.outerHTML.includes('hugo-encrypt-sha1sum')) {
+                reloadHighlightJSAfterHugoDecrypt = false;
+                hljs.addPlugin(new CopyButtonPlugin());
+                hljs.highlightAll();
+            }
+        }, false);
     </script>
     
 
