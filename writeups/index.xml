@@ -3,22 +3,22 @@
   <channel>
     <title>Writeups on erk3&#39;s
 spot</title>
-    <link>http://127.0.0.1/writeups/</link>
+    <link>https://erk3.github.io/writeups/</link>
     <description>Recent content in Writeups on erk3&#39;s
 spot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 31 May 2022 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://127.0.0.1/writeups/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://erk3.github.io/writeups/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Intigriti&#39;s monthly challenge - May 2022</title>
-      <link>http://127.0.0.1/writeups/intigriti-0522/</link>
+      <link>https://erk3.github.io/writeups/intigriti-0522/</link>
       <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1/writeups/intigriti-0522/</guid>
+      <guid>https://erk3.github.io/writeups/intigriti-0522/</guid>
       <description>This content is password protected for the time being.
 Javascript needs to be enabled to decrypt content    The challenge ⏰ It&amp;#39;s CHALLENGE O&amp;#39;CLOCK!
 👉 Find the XSS before Friday June 3th!

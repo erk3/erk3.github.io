@@ -3,22 +3,22 @@
   <channel>
     <title>erk3&#39;s
 spot</title>
-    <link>http://127.0.0.1/</link>
+    <link>https://erk3.github.io/</link>
     <description>Recent content on erk3&#39;s
 spot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 31 May 2022 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://127.0.0.1/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://erk3.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>http://127.0.0.1/about/</link>
+      <link>https://erk3.github.io/about/</link>
       <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1/about/</guid>
+      <guid>https://erk3.github.io/about/</guid>
       <description> $&amp;gt; whoami Reach out, we&amp;rsquo;ll have a beer. If I like you we&amp;rsquo;ll switch to whisky.
 Why this website? I like tech and offsec stuff. Sometimes I feel like sharing.
 Why &amp;lsquo;erk3&amp;rsquo; ? Because Ecky-Ecky-Ecky-erk3-Pakang-Zoom-Boing-Gumzowehzeh.
@@ -27,10 +27,10 @@ Why &amp;lsquo;erk3&amp;rsquo; ? Because Ecky-Ecky-Ecky-erk3-Pakang-Zoom-Boing-G
     
     <item>
       <title>Intigriti&#39;s monthly challenge - May 2022</title>
-      <link>http://127.0.0.1/writeups/intigriti-0522/</link>
+      <link>https://erk3.github.io/writeups/intigriti-0522/</link>
       <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1/writeups/intigriti-0522/</guid>
+      <guid>https://erk3.github.io/writeups/intigriti-0522/</guid>
       <description>This content is password protected for the time being.
 Javascript needs to be enabled to decrypt content    The challenge ⏰ It&amp;#39;s CHALLENGE O&amp;#39;CLOCK!
 👉 Find the XSS before Friday June 3th!
