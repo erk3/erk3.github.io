@@ -31,12 +31,12 @@ Why &amp;lsquo;erk3&amp;rsquo; ? Because Ecky-Ecky-Ecky-erk3-Pakang-Zoom-Boing-G
       <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://erk3.github.io/writeups/intigriti-0522/</guid>
-      <description>The challenge ⏰ It&amp;#39;s CHALLENGE O&amp;#39;CLOCK!
+      <description>/ The challenge ⏰ It&amp;#39;s CHALLENGE O&amp;#39;CLOCK!
 👉 Find the XSS before Friday June 3th!
 👉 Win €300 in SWAG prizes!
 👉 We&amp;#39;ll release a tip for every 100 likes on this tweet!
 Thanks @PiyushThePal for the challenge! 👇https://t.co/X0nq805bVE
-&amp;mdash; INTIGRITI (@intigriti) May 27, 2022  First contact   While browsing the website, one can notice the ?page=x query parameter having different integer values in the URI. A quick glance at the website source code then leads to a particular &amp;lt;script&amp;gt; tag handling it:</description>
+&amp;mdash; INTIGRITI (@intigriti) May 27, 2022  / First contact   While browsing the website, one can notice the ?page=x query parameter having different integer values in the URI. A quick glance at the website source code then leads to a particular &amp;lt;script&amp;gt; tag handling it:</description>
     </item>
     
   </channel>

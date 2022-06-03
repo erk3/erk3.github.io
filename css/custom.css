@@ -1,4 +1,8 @@
 /* Whole website */
+body {
+    font-size: 17px;
+}
+
 a:hover {
     color: #fe7f9c !important;
 }

