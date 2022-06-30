@@ -9,7 +9,7 @@ a:hover {
 
 /* Main view */
 .content {
-    margin-left: 20rem; /* Must match sidebar width */
+    /*margin-left: 20rem; /* Must match sidebar width */
     word-break: break-word;
 }
 
@@ -28,6 +28,11 @@ article {
 
 .post, .post__meta {
     text-align: center;
+}
+
+.sidebar .container {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .container {
@@ -114,7 +119,7 @@ img, video {
 
 /* Sidebar */
 .sidebar {
-    width: 20rem; /* Must match content left margin */
+    /*width: 20rem; /* Must match content left margin */
     background-color: #1a1a1a;
 }
 
@@ -160,4 +165,3 @@ img, video {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-
