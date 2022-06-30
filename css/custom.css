@@ -9,7 +9,6 @@ a:hover {
 
 /* Main view */
 .content {
-    /*margin-left: 20rem; /* Must match sidebar width */
     word-break: break-word;
 }
 
@@ -119,7 +118,6 @@ img, video {
 
 /* Sidebar */
 .sidebar {
-    /*width: 20rem; /* Must match content left margin */
     background-color: #1a1a1a;
 }
 
